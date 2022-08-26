@@ -36,6 +36,9 @@ services:
       # - "9000:9000"
     volumes:
       - "./nginx_dbinit.conf:/etc/nginx/conf.d/default.conf"
+    depends_on:
+      - db
+      - web
     networks:
       - back_tier
     
